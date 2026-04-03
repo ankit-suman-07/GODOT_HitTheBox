@@ -1,3 +1,5 @@
 [gd_scene format=3 uid="uid://dkawam6jomf6g"]
 
-[node name="GameScreenScene" type="Node2D" unique_id=65234424]
+[node name="GameScreenScene" type="Control" unique_id=280096257]
+layout_mode = 3
+anchors_preset = 0
