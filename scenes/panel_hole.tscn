@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b4700dtc4de0q"]
+
+[ext_resource type="Texture2D" uid="uid://bg7d0evrnnmq" path="res://assets/box.png" id="1_dl48n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5q304"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Panel_hole" type="Panel" unique_id=178765074]
+custom_minimum_size = Vector2(180, 180)
+offset_left = -96.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = 96.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5q304")
+
+[node name="hole_image" type="TextureRect" parent="." unique_id=2026486136]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("1_dl48n")
+stretch_mode = 3
