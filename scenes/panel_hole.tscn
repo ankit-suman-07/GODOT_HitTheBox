@@ -4,6 +4,19 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5q304"]
 bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.23753929, 0.23753911, 0.237539, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [node name="Panel_hole" type="Panel" unique_id=178765074]
 custom_minimum_size = Vector2(180, 180)

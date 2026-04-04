@@ -2,6 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://b4700dtc4de0q" path="res://scenes/panel_hole.tscn" id="1_f0jwt"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0jwt"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.023371782, 0.02337179, 0.023371762, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
 [node name="GameScreenScene" type="Control" unique_id=280096257]
 layout_mode = 3
 anchors_preset = 15
@@ -11,6 +23,32 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="score" type="RichTextLabel" parent="." unique_id=375604137]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 87.0
+offset_right = 1000.0
+offset_bottom = 164.0
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "0"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=1364057813]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 852.0
+offset_right = 1000.0
+offset_bottom = 929.0
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "00:00"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=610092576]
 layout_mode = 0
@@ -22,30 +60,51 @@ layout_mode = 2
 theme_override_constants/separation = 100
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1009065033]
+[node name="top" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1009065033]
 layout_mode = 2
 theme_override_constants/separation = 100
 alignment = 1
 
-[node name="Panel_hole" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=178765074 instance=ExtResource("1_f0jwt")]
+[node name="top_left" parent="CenterContainer/VBoxContainer/top" unique_id=178765074 instance=ExtResource("1_f0jwt")]
 layout_mode = 2
 
-[node name="Panel_hole2" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=429255231 instance=ExtResource("1_f0jwt")]
+[node name="top_mid" parent="CenterContainer/VBoxContainer/top" unique_id=429255231 instance=ExtResource("1_f0jwt")]
 layout_mode = 2
 
-[node name="Panel_hole3" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=375992937 instance=ExtResource("1_f0jwt")]
+[node name="top_right" parent="CenterContainer/VBoxContainer/top" unique_id=375992937 instance=ExtResource("1_f0jwt")]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=539480683]
+[node name="bottom" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=539480683]
 layout_mode = 2
 theme_override_constants/separation = 100
 alignment = 1
 
-[node name="Panel_hole" parent="CenterContainer/VBoxContainer/HBoxContainer2" unique_id=747112356 instance=ExtResource("1_f0jwt")]
+[node name="bottom_left" parent="CenterContainer/VBoxContainer/bottom" unique_id=747112356 instance=ExtResource("1_f0jwt")]
 layout_mode = 2
 
-[node name="Panel_hole2" parent="CenterContainer/VBoxContainer/HBoxContainer2" unique_id=1411754545 instance=ExtResource("1_f0jwt")]
+[node name="bottom_mid" parent="CenterContainer/VBoxContainer/bottom" unique_id=1411754545 instance=ExtResource("1_f0jwt")]
 layout_mode = 2
 
-[node name="Panel_hole3" parent="CenterContainer/VBoxContainer/HBoxContainer2" unique_id=1653612113 instance=ExtResource("1_f0jwt")]
+[node name="bottom_right" parent="CenterContainer/VBoxContainer/bottom" unique_id=1653612113 instance=ExtResource("1_f0jwt")]
 layout_mode = 2
+
+[node name="RestartBtn" type="Button" parent="." unique_id=1164271406]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 32.0
+offset_right = 194.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_f0jwt")
+text = "Restart"
+
+[node name="QuitBtn" type="Button" parent="." unique_id=1278374638]
+layout_mode = 0
+offset_left = 847.0
+offset_top = 32.0
+offset_right = 969.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_f0jwt")
+text = "Quit
+"
