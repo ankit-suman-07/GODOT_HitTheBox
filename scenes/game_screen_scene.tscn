@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dkawam6jomf6g"]
 
+[ext_resource type="Script" uid="uid://dra2sb8i2tpab" path="res://scripts/game_screen_scene.gd" id="1_cc88a"]
 [ext_resource type="PackedScene" uid="uid://b4700dtc4de0q" path="res://scenes/panel_hole.tscn" id="1_f0jwt"]
+[ext_resource type="Texture2D" uid="uid://nfwbjc82fh7v" path="res://assets/hammer.png" id="3_m55bb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0jwt"]
 content_margin_left = 20.0
@@ -23,6 +25,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_cc88a")
 
 [node name="score" type="RichTextLabel" parent="." unique_id=375604137]
 layout_mode = 0
@@ -108,3 +111,10 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_f0jwt")
 text = "Quit
 "
+
+[node name="Hammer" type="Sprite2D" parent="." unique_id=465474573]
+scale = Vector2(3, 3)
+texture = ExtResource("3_m55bb")
+
+[connection signal="pressed" from="RestartBtn" to="." method="_on_restart_btn_pressed"]
+[connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]
