@@ -48,7 +48,7 @@ offset_right = 1000.0
 offset_bottom = 929.0
 theme_override_font_sizes/normal_font_size = 56
 bbcode_enabled = true
-text = "00:00"
+text = "0"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
@@ -116,5 +116,13 @@ text = "Quit
 scale = Vector2(3, 3)
 texture = ExtResource("3_m55bb")
 
+[node name="Timer" type="Timer" parent="." unique_id=1067803168]
+autostart = true
+
+[node name="ControlTimerLabel" type="Timer" parent="." unique_id=1178130522]
+autostart = true
+
 [connection signal="pressed" from="RestartBtn" to="." method="_on_restart_btn_pressed"]
 [connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="ControlTimerLabel" to="." method="_on_control_timer_label_timeout"]
