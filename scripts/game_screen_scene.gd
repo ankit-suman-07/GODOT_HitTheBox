@@ -15,6 +15,8 @@ extends Control
 @onready var TIMER = $Timer
 @onready var TIMER_FOR_LABEL = $ControlTimerLabel
 
+@onready var HIT_SOUND = $HitSound
+
 var HOLES = []
 var active_hole = null
 var timer_label_seconds = 0
@@ -45,6 +47,7 @@ func _input(event):
 				score += 1
 				score_label.text = str(score)
 				print("HIT!")
+				HIT_SOUND.play()
 
 func _spawn_box():
 	

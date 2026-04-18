@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://80m224ih2h2g"]
 
 [ext_resource type="Script" uid="uid://6oq72i3vhplh" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://dns5jtyo6eicj" path="res://assets/fonts/Pixel Game.otf" id="2_ekxnf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
 content_margin_left = 20.0
@@ -37,7 +38,8 @@ theme_override_constants/separation = 20
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/VBoxContainer2" unique_id=1115314734]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 64
+theme_override_fonts/normal_font = ExtResource("2_ekxnf")
+theme_override_font_sizes/normal_font_size = 86
 bbcode_enabled = true
 text = "HIT-THE-BOX"
 fit_content = true
@@ -50,6 +52,7 @@ theme_override_constants/separation = 20
 [node name="StartGameBtn" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer" unique_id=1254888869]
 layout_mode = 2
 theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 text = "Start Game"
@@ -57,6 +60,7 @@ text = "Start Game"
 [node name="QuitGameBtn" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer" unique_id=1368938438]
 layout_mode = 2
 theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 text = "Exit"
