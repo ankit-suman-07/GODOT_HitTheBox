@@ -16,7 +16,9 @@ extends Control
 @onready var TIMER_FOR_LABEL = $ControlTimerLabel
 
 var HOLES = []
+var active_hole = null
 var timer_label_seconds = 0
+var score = 0
 
 var is_hitting = false
 
@@ -34,14 +36,22 @@ func _process(delta: float) -> void:
 	
 
 func _input(event):
+	var mouse_pos = get_global_mouse_position()
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			hit_animation()
+			if active_hole != null and active_hole.get_global_rect().has_point(mouse_pos):
+				#get_tree().paused = true
+				score += 1
+				score_label.text = str(score)
+				print("HIT!")
 
 func _spawn_box():
+	
 	var select_hole = HOLES.pick_random()
+	active_hole = select_hole
 	select_hole.get_child(0).visible = true
-	await get_tree().create_timer(0.3).timeout
+	await get_tree().create_timer(0.5).timeout
 	select_hole.get_child(0).visible = false
 	
 
