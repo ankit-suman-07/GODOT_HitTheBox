@@ -1,14 +1,6 @@
 # Hit-The-Box
 
-A reflex-testing game using Godot, implementing random spawning logic, event-driven input handling, custom cursor animation, and timer-based mechanics to deliver fast, responsive gameplay.
-
-### Symbols used:
-- 🍒 Cherry
-- 🍋 Lemon
-- 🔔 Bell
-- ⭐ Star
-- 7️⃣ Seven (rare, high payout)
-- 🃏 Wild (substitutes other symbols)
+A reflex-testing game, Whack-a-mole inspired, made using Godot, implementing random spawning logic, event-driven input handling, custom cursor animation, and timer-based mechanics to deliver fast, responsive gameplay.
 
 
 ### Game Design Document: [Click Here](https://github.com/ankit-suman-07/GODOT_HitTheBox/blob/main/GDD.md)
